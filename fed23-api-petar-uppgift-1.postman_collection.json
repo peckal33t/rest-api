@@ -1,0 +1,623 @@
+{
+	"info": {
+		"_postman_id": "7c821e89-0915-46bf-a266-a43cb61189bd",
+		"name": "fed23-api-petar-uppgift-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31868128"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/register",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log in user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/login",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTcwODk5MDkwOCwiZXhwIjoxNzA5MDc3MzA4fQ.3uFUsU8sSSiPfATv4ofMyONSl0cfNcC8NWU20BD25KA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/refresh",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Get users profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/profile",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update users profile",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/profile",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoicGV0YXJAdW1icmVsbGEub3JnIiwibmFtZSI6IlBldGFyIiwiaWF0IjoxNzA4OTg4NTk5LCJleHAiOjE3MDkwMDI5OTl9.NiBUBH41a_XpanZA1_1hF0DV7HSTiV-h46Jg-XYQlQc",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Photos",
+			"item": [
+				{
+					"name": "Get all photos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/photos",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"photos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single photo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/photos/1",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"photos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"\",\r\n    \"url\": \"\",\r\n    \"comment\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/photos",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"photos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a photo",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"\",\r\n    \"comment\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/photos/1",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"photos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a photo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/photos/1",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"photos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoicGV0YXJAdW1icmVsbGEub3JnIiwibmFtZSI6IlBldGFyIiwiaWF0IjoxNzA4OTg4NTk5LCJleHAiOjE3MDkwMDI5OTl9.NiBUBH41a_XpanZA1_1hF0DV7HSTiV-h46Jg-XYQlQc",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Albums",
+			"item": [
+				{
+					"name": "Get all albums",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/albums",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single album",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/albums/2",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"albums",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create an album",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/albums",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"albums"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Connect a photo to album",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/albums/2/photos",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"albums",
+								"2",
+								"photos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Connect photos to album",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 2\r\n    },\r\n    {\r\n        \"id\": 3\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/albums/1/photos",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"albums",
+								"1",
+								"photos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an album",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/albums/2",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"albums",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an album",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/albums/2",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"albums",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Disconnect a photo from album",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/albums/1/photos/3",
+							"protocol": "https",
+							"host": [
+								"fed23-api-uppgift-1-peckal33t-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"albums",
+								"1",
+								"photos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoicGV0YXJAdW1icmVsbGEub3JnIiwibmFtZSI6IlBldGFyIiwiaWF0IjoxNzA4OTg4NTk5LCJleHAiOjE3MDkwMDI5OTl9.NiBUBH41a_XpanZA1_1hF0DV7HSTiV-h46Jg-XYQlQc",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "GET /",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fed23-api-uppgift-1-peckal33t-production.up.railway.app/",
+					"protocol": "https",
+					"host": [
+						"fed23-api-uppgift-1-peckal33t-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
